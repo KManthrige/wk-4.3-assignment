@@ -97,3 +97,37 @@ function empty() {
 
 empty()
 console.log('empty basket', basket)
+
+
+console.log('*******Stretch Goals*******')
+
+const maxItems = 5
+let bag = []
+let list = ['plums', 'dog food', 'onions', 'banana', 'peanuts']
+
+function isFull() {
+    if (bag.length >= maxItems) {
+
+        return true
+    }
+    else {
+        return false
+    }
+
+}
+
+function cart() {
+
+    for (i = 0; i < list.length; i++) {
+
+        if (!isFull()) {
+            bag.push(list[i])
+            console.log(' bag is not full')
+        }//end if statement
+        else {
+            console.log('bag is full')
+        }//end else
+    }//end for loop
+}//end cart function
+
+cart()
