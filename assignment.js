@@ -103,7 +103,7 @@ console.log('*******Stretch Goals*******')
 
 const maxItems = 5
 let bag = []
-let list = ['plums', 'dog food', 'onions', 'banana', 'peanuts']
+let list = ['plums', 'dog food', 'onions', 'banana']
 
 function isFull() {
     if (bag.length >= maxItems) {
@@ -122,12 +122,45 @@ function cart() {
 
         if (!isFull()) {
             bag.push(list[i])
-            console.log(' bag is not full')
+  
         }//end if statement
-        else {
-            console.log('bag is full')
-        }//end else
+        // else {
+        //     console.log('bag is full')
+        // }//end else
     }//end for loop
 }//end cart function
 
 cart()
+console.log(' is the bag full?', isFull())
+
+let remove = 'plums'
+let samsung = 5
+
+function removeItem(item, phone) {
+    let index = bag.indexOf(item)
+    console.log(index)
+    if(index<0){
+        return null
+    } else {
+        bag.splice(index, phone)
+        return item
+    }
+}//end fuction removeItem
+
+
+console.log('Removed item', removeItem(remove, samsung))
+console.log ('what is in the bag', bag)
+
+
+let array = ['q', 'w', 'r', 't']
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[1];
+    console.log(element)
+    
+}
+
+console.log(array[0])
+console.log(array[1])
+console.log(array[2])
+console.log(array[3])
